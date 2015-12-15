@@ -1,0 +1,306 @@
+// --------------------------------
+// Crane: template.less
+// --------------------------------
+
+// Contains various global layout styles.
+
+
+
+// -----------------------------
+// 2. Media Queries
+// -----------------------------
+
+
+@bp-tablet: ~"only screen and (max-width: 800px)";
+@bp-mobile: ~"only screen and (max-width: 600px)";
+
+
+
+
+// -----------------------------
+// 3. Typography
+// -----------------------------
+
+
+    // Anchor links
+    a {
+        color: @button-color;
+    }
+
+
+
+
+// -----------------------------
+// 3. Global Styles
+// -----------------------------
+
+
+// Body
+// ---------------
+
+body {
+    background: @bg-color;
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+
+// Stops mobile scrolling of the body - only the nav is scrollable
+.noscroll {
+    overflow: hidden;
+    height: 100%;
+    max-height: 100vh;
+}
+
+
+
+
+// Container
+// ---------------
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.blog-post-container {
+    width: 60%;
+    margin: 0 auto;
+
+    @media @tablet {
+        width: 100%;
+    }
+}
+
+
+
+// -----------------------------
+// 4. #Template Header
+// -----------------------------
+
+.template-header {
+    min-height: 300px;
+    height: 100%;
+
+    // Background Color
+    background-color: @contrast-color;
+
+
+
+
+    // Flex -Container
+    // ---------------
+
+    .flex-wrapper{
+        .flex(@display: flex);
+        .flex-direction(@direction: column);
+    }
+
+    // Container
+    // ---------------
+
+    .container {
+        min-height: 300px;
+        height: 100%;
+
+        .flex(@display: flex);
+        .flex-direction(@direction: column);
+        .justify-content(@justify: center);
+    }
+
+
+
+    // Header Top
+    // ---------------
+
+    // Flexbox mixins to position the company info and the navigation
+    .header--top {
+        .flex(@display: flex); // Mixins
+        .align-content(@align: center);
+        .justify-content(@justify: space-between); // Mixins
+
+        -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+    }
+
+
+
+    .company-info {
+        .flex(@display: flex);
+        .align-content(@align: center);
+
+        -webkit-flex: 0 0 30%;
+        -ms-flex: 0 0 30%;
+        flex: 0 0 30%;
+
+        padding: 14px 0;
+        margin: 1em 0;
+        min-width: 100px; // Stops nav encroaching when a lot of pages in the template
+
+
+        // Wraps the logo and company name at mobile
+        @media @mobile {
+            .flex-wrap(@wrap: wrap);
+            .align-content(@align: flex-start);
+            -webkit-flex: 1 0 50%;
+            -ms-flex: 1 0 50%;
+            flex: 1 0 50%;
+        }
+    }
+
+
+
+    // Header Content
+    // ----------------
+
+    .header--content {
+
+        -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+        .align-self(@align: center);
+        .flex(@display: flex);
+        .align-items(@align: center);
+
+        max-width: 50%;
+        text-align: center;
+        margin: 0 auto;
+
+        h1 {
+            color: @title-color;
+        }
+
+
+        @media @bp-tablet {
+            max-width: 80%;
+
+            -webkit-flex: 1 1 50%;
+            -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+        }
+
+        @media @bp-mobile {
+            max-width: 90%;
+
+            -webkit-flex: 1 1 80%;
+            -ms-flex: 1 1 80%;
+            flex: 1 1 80%;
+        }
+    }
+
+
+
+    // Mobile
+    // ----------------
+
+    @media @bp-tablet {
+        .flex-wrap(@wrap: wrap); // Mixins
+    }
+
+
+    @media @bp-mobile {
+        .justify-content(@justify: center); // Mixins
+    }
+
+
+
+
+    // Home Page Header
+    // ----------------
+
+    &.home-page {
+        .container {
+            min-height: 500px;
+        }
+        min-height: 600px;
+
+        @media @bp-tablet {
+            min-height: 400px;
+        }
+    }
+
+
+}
+
+
+// -----------------------------
+// 4. Page Layout
+// -----------------------------
+
+
+.template-content {
+    margin-top: 60px;
+
+    &.default {
+        background-color: @color-swatch1;
+        margin-top: 0;
+        padding: 60px 30px;
+    }
+
+    &.blog-post-container {
+        background-color: @color-swatch1;
+        padding: 60px 20px;
+    }
+
+    @media @bp-mobile {
+        margin-top: 40px;
+    }
+}
+
+// Floating footer flexbox fix
+// ---------------------------
+.container {
+    display: flex; // Switch on flexbox layout
+    flex-direction: column; // Orient flexbox to columns
+    height: 100vh; // Set height to the height of the viewport
+
+    // Apply flex shrink 0 to all direct childer element
+    > * {
+        flex-shrink: 0;
+    }
+}
+
+.template-content {
+    flex: 1 0 auto; // Stretch the body content to push the footer down
+}
+
+
+
+
+// -----------------------------
+// 5. Footer
+// -----------------------------
+
+
+.template-footer {
+    .flex(@display: flex); // Mixins
+    .justify-content(@justify: space-between); // Mixins
+    .flex-wrap(@wrap: wrap); // Mixins
+
+    margin-top: 80px;
+
+
+    // Content widget margin to stop crashing
+    [data-widget-type="content"] {
+        margin-right: 20px;
+    }
+
+
+
+    p {
+        color: @button-color;
+    }
+
+
+    // Mobile
+    // ----------------
+
+    @media @mobile {
+        .flex-wrap(@wrap: wrap);
+        .justify-content(@justify: center);
+    }
+}

@@ -1,2 +1,2 @@
-# fade
-Basekit V8 Template
+# crane
+A BaseKit blog template

@@ -1,0 +1,46 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+    <!-- Header -->
+    <header class="template-header home-page">
+    <div class="flex-wrapper">
+        <div class="container">
+            <div class="header--top">
+                <div class="company-info">
+                    {{widget('logo', 'logo', {"defaultlogo": asset('images/logo-default.png')})|raw}}
+                    {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+                </div>
+
+                {{widget('extendednavigation', 'navigation', {"align":"right"})|raw}}
+            </div>
+
+            <div class="header--content">
+                {{widget('content', 'header-content1', {content: '<h1>Fusce neque. Aenean ut eros et nisl sagittis vestibulum.</h1>'})|raw}}
+            </div>
+        </div>
+    </div>
+    </header>
+
+    <!-- Container -->
+    <div class="container">
+
+        <!-- Page Content -->
+        <section class="template-content">
+
+        <!-- Blog post list -->
+        {{widget('blogpostlist', 'allblogposts', {})|raw}}
+
+        <!-- Main Widget Zone -->
+        {{zone('main')|raw}}
+
+        </section>
+        <!-- End Page Content -->
+
+        {% include "includes/footer.twig" %}
+
+    </div>
+    <!-- End Container -->
+
+
+{% endblock %}
