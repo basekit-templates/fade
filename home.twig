@@ -16,7 +16,13 @@
             </div>
 
             <div class="header--content">
-                {{widget('content', 'header-content1', {content: '<h1>Fusce neque. Aenean ut eros et nisl sagittis vestibulum.</h1>'})|raw}}
+                {{widget('feature', 'featurehome', {
+    "header": "profile",
+    "defaultBgImg": asset('images/feature-bg.png'),
+    'positionTopPercentage': '0',
+    'showBtn': true,
+    buttonText: "Lorem Ipsum"
+})|raw}}
             </div>
         </div>
     </div>
