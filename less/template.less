@@ -81,150 +81,157 @@ body {
 // 4. #Template Header
 // -----------------------------
 
-.template-header {
-    min-height: 300px;
-    height: 100%;
+// -----------------------------
+// 1.  #Logo
+// -----------------------------
 
-    // Background Color
-    background-color: @contrast-color;
+.widget__logo {
+    margin-right: 10px;
+    @media @tablet {
+        margin-right: 0;
+    }
+}
 
+.logo-link {
+    @media @tablet {
+        margin: 0px auto;
+        display: table;
+    }
+}
 
+// Header Logo Flexbox
+.header-logo {
+    // Flex child
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
 
+    // Layout
+    text-align: center;
+    max-width: 100%;
 
-    // Flex -Container
-    // ---------------
-
-    .flex-wrapper{
-        .flex(@display: flex);
-        .flex-direction(@direction: column);
+    @media @tablet {
+        -webkit-order: 1;
+        -ms-flex-order: 1; 
+        order: 1;
+        text-align: left;
+        display: block;
+        padding: 10px 0px;
     }
 
-    // Container
-    // ---------------
-
-    .container {
-        min-height: 300px;
-        height: 100%;
-
-        .flex(@display: flex);
-        .flex-direction(@direction: column);
-        .justify-content(@justify: center);
+    img, .logo {
+        line-height: 0;
     }
+}
 
 
 
-    // Header Top
-    // ---------------
 
-    // Flexbox mixins to position the company info and the navigation
-    .header--top {
-        .flex(@display: flex); // Mixins
-        .align-content(@align: center);
-        .justify-content(@justify: space-between); // Mixins
+// -----------------------------
+// 2.  #Company Name
+// -----------------------------
 
-        -webkit-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+.company-name {
+    @media @tablet {
+        text-align:center;
     }
+}
 
-
-
-    .company-info {
-        .flex(@display: flex);
-        .align-content(@align: center);
-
-        -webkit-flex: 0 0 30%;
-        -ms-flex: 0 0 30%;
-        flex: 0 0 30%;
-
-        padding: 14px 0;
-        margin: 1em 0;
-        min-width: 100px; // Stops nav encroaching when a lot of pages in the template
-
-
-        // Wraps the logo and company name at mobile
-        @media @mobile {
-            .flex-wrap(@wrap: wrap);
-            .align-content(@align: flex-start);
-            -webkit-flex: 1 0 50%;
-            -ms-flex: 1 0 50%;
-            flex: 1 0 50%;
-        }
+.company-link {
+    vertical-align: top;
+    @media @tablet {
+        font-size: bkscale(@font__companyname--font-size,0.8);
+        line-height: bkscale(@font__companyname--line-height,0.8);
     }
+    @media @mobile {
+        font-size: bkscale(@font__companyname--font-size,0.7);
+        line-height: bkscale(@font__companyname--line-height,0.7);
+    }
+}
 
-
-
-    // Header Content
-    // ----------------
-
-    .header--content {
-
-        -webkit-flex: 1 0 auto;
-        -ms-flex: 1 0 auto;
-        flex: 1 0 auto;
-        .align-self(@align: center);
-        .flex(@display: flex);
-        .align-items(@align: center);
-
-        max-width: 50%;
+// Header  Companyname Flexbox
+.header-companyname {
+    // Flex child
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+    -webkit-box-flex: 10;
+    -moz-box-flex: 10;
+    -webkit-flex: 10 10 auto;
+    -ms-flex: 10 10 auto;
+    flex: 10 10 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    @media @tablet {
+        -webkit-order: 2;
+        -ms-flex-order: 2;
+        order: 2;
+        display:block;
+        margin: 0.5em 0;
         text-align: center;
-        margin: 0 auto;
-
-        h1 {
-            color: @title-color;
-        }
-
-
-        @media @bp-tablet {
-            max-width: 80%;
-
-            -webkit-flex: 1 1 50%;
-            -ms-flex: 1 1 50%;
-            flex: 1 1 50%;
-        }
-
-        @media @bp-mobile {
-            max-width: 90%;
-
-            -webkit-flex: 1 1 80%;
-            -ms-flex: 1 1 80%;
-            flex: 1 1 80%;
-        }
     }
+}
 
 
 
-    // Mobile
-    // ----------------
 
-    @media @bp-tablet {
-        .flex-wrap(@wrap: wrap); // Mixins
+// -----------------------------
+// 3.  #Navigation
+// -----------------------------
+
+// Header Extended Navigation
+.header-extendednavigation {
+    // Flex child
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 4;
+    -ms-flex-order: 4;
+    order: 4;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    @media @tablet {
+        -webkit-order: 4;
+        -ms-flex-order: 4;
+        order: 4;
+        margin: 0;
+        width: 100%;
     }
+}
 
+// Folder Item Parent: Gives arrow 
+.item-name--parent:after {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    margin-left: 4px;
+    border: 5px solid transparent;
+    border-top-color: transparent;
+}
 
-    @media @bp-mobile {
-        .justify-content(@justify: center); // Mixins
+// Add Styles to Selected Li
+.extendednavigation li.selected {
+    a, .text {
+        color: @color__navigation--text--selected;
     }
-
-
-
-
-    // Home Page Header
-    // ----------------
-
-    &.home-page {
-        .container {
-            min-height: 500px;
-            max-width: 100%;
-        }
-        min-height: 600px;
-
-        @media @bp-tablet {
-            min-height: 400px;
-        }
-    }
-
-
 }
 
 

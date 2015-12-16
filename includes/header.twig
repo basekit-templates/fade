@@ -1,20 +1,15 @@
-<!-- Header include -->
+<!-- Header -->
 <header class="template-header">
-    <div class="flex-wrapper">
-        <div class="container">
-            <div class="header--top">
-                <div class="company-info">
-                    {{widget('logo', 'logo', {"defaultlogo": asset('images/logo-default.png')})|raw}}
-                    {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
-                </div>
-
-                {{widget('extendednavigation', 'navigation', {"align":"right"})|raw}}
-            </div>
-
-            <div class="header--content">
-                {{widget('pagetitle', 'title', {})|raw}}
-            </div>
-
+    <div class="header-wrapper">
+        <div class="header-logo">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+        </div>
+        <div class="header-companyname">
+            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+        </div>
+        <div class="header-extendednavigation">
+            {{widget('extendednavigation', 'extendednavigation', {"align":"right"})|raw}}
         </div>
     </div>
 </header>
+<!-- End Header -->
