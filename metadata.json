@@ -13,11 +13,11 @@
     {
         "Swatch 1": {
             "color1":"#ffffff",
-            "color2":"#0064FF",
-            "color3":"#ED334D",
-            "color4":"#ED334D",
-            "color5":"#999999",
-            "color6":"#ffffff",
+            "color2":"#eeeeef",
+            "color3":"#df3c3c",
+            "color4":"#000000",
+            "color5":"#7e7e7e",
+            "color6":"#000000",
             "color7":"#FFEA95"
         },
         "Swatch 2": {
@@ -96,7 +96,7 @@
             "font-size": "18px",
             "font-weight": "200",
             "line-height": "35px",
-            "color": "@color-swatch5",
+            "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
         "font6": {
@@ -133,7 +133,7 @@
             "font-size": "32px",
             "font-weight": "inherit",
             "line-height": "inherit",
-            "color": "@color-swatch5",
+            "color": "lighten(@color-swatch4,50%)",
             "letter-spacing": "inherit"
         },
         "font10": {
@@ -147,12 +147,12 @@
     },
     "styles": {
         "colors": {
-            "color__primary": "@color-swatch2",
+            "color__primary": "@color-swatch4",
             "color__secondary": "@color-swatch7"
         },
         "site": {
-            "color__body--background": "darken(@color-swatch1,10%)",
-            "color__link--text": "@color-swatch2",
+            "color__body--background": "@color-swatch1",
+            "color__link--text": "@color-swatch3",
             "color__companyname--text": "@font-swatch10-color",
             "font__companyname--font-family": "@font-swatch10-font-family",
             "font__companyname--font-size": "@font-swatch10-font-size",
@@ -193,6 +193,24 @@
             "font__p--font-weight" : "@font-swatch5-font-weight",
             "font__p--line-height" : "@font-swatch5-line-height",
             "font__p--letter-spacing" : "@font-swatch5-letter-spacing"
+        },
+        "feature": {
+            "color__feature-content--background" : "fade(@color__primary, 30%)",
+            "color__feature-headline--text": "@font-swatch8-color",
+            "color__feature-strapline--text": "@font-swatch9-color",
+            "color__feature-button--text": "@color-swatch1",
+            "color__feature-button--background": "@color-swatch6",
+            "color__feature-button--background--hover": "@color__primary",
+            "font__feature-headline--font-family" : "@font-swatch8-font-family",
+            "font__feature-headline--font-size" : "@font-swatch8-font-size",
+            "font__feature-headline--font-weight" : "@font-swatch8-font-weight",
+            "font__feature-headline--line-height" : "@font-swatch8-line-height",
+            "font__feature-headline--letter-spacing" : "@font-swatch8-letter-spacing",
+            "font__feature-strapline--font-family" : "@font-swatch9-font-family",
+            "font__feature-strapline--font-size" : "@font-swatch9-font-size",
+            "font__feature-strapline--font-weight" : "@font-swatch9-font-weight",
+            "font__feature-strapline--line-height" : "@font-swatch9-line-height",
+            "font__feature-strapline--letter-spacing" : "@font-swatch9-letter-spacing"
         },
         "navigation": {
             "color__navigation--text": "@font-swatch6-color",
