@@ -214,7 +214,7 @@
             "font__button--letter-spacing": "@font-swatch7-letter-spacing"
         },
         "header": {
-            "color__header--background": "@color-swatch2"
+            "color__header--background": "transparent"
         },
         "gallery": {
             "color__gallery-caption--background": "fade(@color__secondary,30%)",
