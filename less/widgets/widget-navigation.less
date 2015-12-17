@@ -18,13 +18,6 @@
     -webkit-align-self: auto;
     -ms-flex-item-align: auto;
     align-self: auto;
-    @media @tablet {
-        -webkit-order: 4;
-        -ms-flex-order: 4;
-        order: 4;
-        margin: 0;
-        width: 100%;
-    }
 }
 
 // Folder Item Parent: Gives arrow 
@@ -40,7 +33,7 @@
 // Add Styles to Selected Li
 .extendednavigation li.selected {
     a, .text {
-        color: @color__navigation--text--selected;
+
     }
 }
 
@@ -100,7 +93,43 @@
     border-top-color: @color-swatch6;
 }
 
+// Navigation Link
+.navigation-item .item-name {
+    padding: 0;
+    margin: 5px 10px;
+    &:hover {
+        border-bottom: 2px solid @color-swatch3;
+        display: inline-block;
+        @media @tablet {
+            border-bottom: 0;
+            display: block;
+        }
+    }
+}
 
+// Dropdown Menu
+// -------------
+
+.navigation-item.folder .item-name:hover {
+    border: 0px solid @color-swatch1;
+    padding: 0;
+    margin: 5px 10px;
+    display: block;
+}
+
+
+// Selected nav item
+.navigation-item.selected > .item-name { 
+    border-bottom: 2px solid fade(@color-swatch1, 50%);
+    @media @tablet {
+        border-bottom: 0;
+    }
+}
+
+.extendednavigation li.selected a, 
+.extendednavigation li.selected .text {
+    color: @font-swatch6-color;
+}
 
 
 // Mobile Navigation

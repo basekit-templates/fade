@@ -78,7 +78,6 @@
     // Layout
     padding: 10px 2%;
     @media @tablet {
-        display: block;
         padding: 10px 4% 15px;
     }
 }
@@ -210,9 +209,11 @@
     width: 100%;
     @media @tablet {
         min-height: 400px;
+        height: 500px;
     }
     @media @mobile {
         min-height: 200px;
+        height: 100hv;
     }
 }
 
@@ -245,7 +246,7 @@
     }
     @media @mobile {
         font-size: bkscale(@font-swatch8-font-size,0.7);
-        line-height: bkscale(@font-swatch8-line-height,0.8);
+        line-height: bkscale(@font-swatch8-line-height,0.9);
     }
 }
 
