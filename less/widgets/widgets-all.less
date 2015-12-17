@@ -275,9 +275,13 @@
 
 .feature__button { 
     margin: 10px 0 0 0; 
-    border: 1px solid @color-swatch1;
-    color: @color__feature-headline--text;
+    color: @color__feature-button--text;
+    background-color: @color__feature-button--background;
+    &:hover {
+        background-color: @color__feature-button--background--hover;
+    }
 }
+
 
 // Default Page Feature
 // --------------------------
