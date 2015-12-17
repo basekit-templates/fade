@@ -663,6 +663,7 @@ legend {
     font-family: @font__h2--font-family;
     color: @color-swatch4;
     letter-spacing: @font__h2--letter-spacing;
+    font-weight: @font__h2--font-weight;
 }
 
 
@@ -737,7 +738,7 @@ input[type="password"],
 textarea,
 .input--single-line {
     // Padding is set in stylesheet.less
-    border: 2px solid @button-color;
+    border: 2px solid @color-swatch2;
     resize: none;
     -webkit-appearance: none;
     -webkit-border-radius: 0;
@@ -794,8 +795,13 @@ textarea,
         margin-bottom: 20px;
     }
 
+    .account-link {
+        letter-spacing: 0px;
+    }
 
-
+    .account-link a:hover {
+        text-decoration: none;
+    }
 
     // Tweet Item
     // ----------

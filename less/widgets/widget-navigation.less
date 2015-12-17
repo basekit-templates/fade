@@ -57,7 +57,6 @@
 // -----------------
 
 .navigation-list--children {
-    border: 2px solid @contrast-color;
     min-width: 150px;
 }
 
@@ -182,7 +181,7 @@
         transition-duration: 0.4s;
 
         padding: 150px 20px;
-        background-color: @contrast-color;
+        background-color: @color-swatch1;
 
         // Allows scrolling on mobile
         &.open {
@@ -303,7 +302,7 @@
     .animation;
 
     // Displays as icon's middle bar
-    background-color: @spare;
+    background-color: @font-swatch6-color;
     background-clip: content-box;
     width: 50px;
     height: 47px;
@@ -331,7 +330,7 @@
         position: absolute;
         left: 10px;
         display: block;
-        background: @spare;
+        background: @font-swatch6-color;
         margin-right: 0;
         margin-left: 0;
         -webkit-transition: all 0.25s ease-in-out;
@@ -359,10 +358,10 @@
 
 
     &:hover {
-        background-color: @spare;
+        background-color: @font-swatch6-color;
 
         &:after, &:before {
-            background: @spare;
+            background: @font-swatch6-color;
         }
     }
 
@@ -371,16 +370,16 @@
     // ------------------------------
 
     .open & {
-        background-color: fade(@spare, 0%);
+        background-color: fade(@font-swatch6-color;, 0%);
         z-index: 100000;
 
         &:before {
-            top: 23px; background: @spare; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);
+            top: 23px; background: @font-swatch6-color;; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);
 
         }
 
         &:after {
-            bottom: 21px; background: @spare; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -o-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg);
+            bottom: 21px; background: @font-swatch6-color;; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -o-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg);
         }
     }
 }
