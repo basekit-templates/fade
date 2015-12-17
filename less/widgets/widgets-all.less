@@ -160,6 +160,10 @@
     }
 }
 
+.companyname__company-link a:hover {
+    text-decoration: none;
+}
+
 // Header  Companyname Flexbox
 .header-companyname {
     // Flex child
@@ -618,11 +622,8 @@ button,
 .button {
     .transition(@duration:0.2s, @ease:ease-in-out); // Mixin
     line-height: @font__button--line-height;
-
-    &:hover {
-        background-color: @contrast-color;
-    }
-
+    padding: 10px 15px;
+    
     &:focus {
         outline: 0;
     }
