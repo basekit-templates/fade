@@ -370,16 +370,16 @@
     // ------------------------------
 
     .open & {
-        background-color: fade(@font-swatch6-color;, 0%);
+        background-color: @font-swatch6-color;
         z-index: 100000;
 
         &:before {
-            top: 23px; background: @font-swatch6-color;; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);
+            top: 23px; background: @font-swatch6-color; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);
 
         }
 
         &:after {
-            bottom: 21px; background: @font-swatch6-color;; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -o-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg);
+            bottom: 21px; background: @font-swatch6-color; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -o-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg);
         }
     }
 }
