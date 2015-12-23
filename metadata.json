@@ -1,5 +1,5 @@
 {
-    "name": "Fade",
+    "name": "fade",
     "thumbnail": "thumbnail.png",
     "screenshot": "fade-screenshot.jpg",
     "widgetVersion":2,
@@ -138,7 +138,7 @@
         },
         "font10": {
             "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
-            "font-size": "36px",
+            "font-size": "30px",
             "font-weight": "700",
             "line-height": "inherit",
             "color": "@color-swatch6",

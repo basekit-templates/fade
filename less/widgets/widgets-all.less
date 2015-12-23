@@ -232,6 +232,10 @@
     background-color: fade(@color-swatch4, 20%);
     @media @tablet {
         max-width: 100%;
+        padding: 30px 60px;
+    }
+    @media @mobile {
+        padding: 30px;
     }
 }
 
@@ -267,9 +271,17 @@
     }
 }
 
+
+// Default Page
+// ---------------
+
 .bk-pt-default .feature__headline {
     font-size: bkscale(@font-swatch8-font-size,0.8);
     line-height: bkscale(@font-swatch8-line-height,0.9);
+}
+
+.bk-pt-default  .template-header {
+    border-bottom: 1px solid @color-swatch2;
 }
 
 

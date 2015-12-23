@@ -87,7 +87,10 @@ body {
     &.default {
         background-color: @color-swatch1;
         margin-top: 0;
-        padding: 60px 30px;
+        padding: 140px 30px 0px;
+        @media @tablet {
+            padding: 120px 30px 0px;
+        }
     }
 
     &.blog-post-container {
@@ -128,7 +131,8 @@ body {
     .justify-content(@justify: space-between); // Mixins
     .flex-wrap(@wrap: wrap); // Mixins
 
-    margin-top: 80px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 
 
     // Content widget margin to stop crashing
