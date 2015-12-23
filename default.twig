@@ -4,21 +4,25 @@
 
     {% include "includes/header.twig" %}
 
-    <!-- Container -->
-    <div class="container">
+    <div class="bk-pt-default">
 
-        <!-- Page Content -->
-        <section class="template-content default">
-
-            <!-- Main Widget Zone -->
-            {{zone('main')|raw}}
-
-        </section>
-        <!-- End Page Content -->
-
-        {% include "includes/footer.twig" %}
+        <!-- Container -->
+        <div class="container">
+    
+            <!-- Page Content -->
+            <section class="template-content default">
+    
+                <!-- Main Widget Zone -->
+                {{zone('main')|raw}}
+    
+            </section>
+            <!-- End Page Content -->
+    
+            {% include "includes/footer.twig" %}
+    
+        </div>
+    <!-- End Container -->
 
     </div>
-    <!-- End Container -->
 
 {% endblock %}
