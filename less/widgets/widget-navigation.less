@@ -98,6 +98,7 @@
         @media @tablet {
             border-bottom: 0;
             display: block;
+            padding-bottom: 0;
         }
     }
 }
@@ -126,6 +127,12 @@
 .extendednavigation li.selected a, 
 .extendednavigation li.selected .text {
     color: @font-swatch6-color;
+}
+
+.navigation-item.folder.open-folder .navigation-list--children {
+    @media @tablet {
+        background-color: @color-swatch2;
+    }
 }
 
 
