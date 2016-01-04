@@ -1,2 +1,2 @@
-# crane
-A BaseKit blog template
+# mono
+BaseKit Standard Template
