@@ -218,18 +218,6 @@
         min-height: 200px;
         height: 100vh;
     }
-    &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: @color__feature-content--background;
-        opacity: 0.8;
-    }
 }
 
 
@@ -247,6 +235,18 @@
     }
     @media @mobile {
         padding: 30px;
+    }
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: @color__feature-content--background;
+        opacity: 0.8;
     }
 }
 
