@@ -1,7 +1,7 @@
 {
-    "name": "fade",
+    "name": "mono",
     "thumbnail": "thumbnail.png",
-    "screenshot": "fade-screenshot.jpg",
+    "screenshot": "mono-screenshot.jpg",
     "widgetVersion":2,
     "pageTypes": ["home"],
     "templateType":"standard",
