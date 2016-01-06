@@ -2,8 +2,6 @@
 
 {% block content %}
 
-{% include "includes/header.twig" %}
-
 <div class="homepage-feature">
     {{widget('feature', 'featurehome', {
         "header": "profile", 
@@ -13,6 +11,8 @@
         buttonText: "Lorem Ipsum"
     })|raw}}
 </div>
+
+{% include "includes/header.twig" %}
 
     <!-- Container -->
     <div class="container">
