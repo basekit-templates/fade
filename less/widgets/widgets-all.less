@@ -242,7 +242,7 @@
         padding: 30px 60px;
     }
     @media @mobile {
-        padding: 30px;
+        padding: 20px;
     }
 }
 
@@ -254,13 +254,13 @@
     max-width: 70%;
     margin: 0px auto;
     @media @tablet {
-        font-size: bkscale(@font-swatch8-font-size,0.7);
-        line-height: bkscale(@font-swatch8-line-height,0.8);
+        font-size: bkscale(@font-swatch8-font-size,0.6);
+        line-height: bkscale(@font-swatch8-line-height,0.7);
         max-width: 100%;
     }
     @media @mobile {
-        font-size: bkscale(@font-swatch8-font-size,0.6);
-        line-height: bkscale(@font-swatch8-line-height,0.7);
+        font-size: bkscale(@font-swatch8-font-size,0.5);
+        line-height: bkscale(@font-swatch8-line-height,0.6);
     }
 }
 
@@ -904,7 +904,13 @@ textarea,
 
 }
 
+.responsivecolumns {
 
+    // All Columns
+    .column .twitter .tweet-item {
+        flex: 1 1 100%;
+    }
+}
 
 
 // -----------------------------
