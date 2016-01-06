@@ -82,7 +82,6 @@ body {
 
 
 .template-content {
-    margin-top: 100px;
 
     &.default {
         background-color: @color-swatch1;
@@ -102,6 +101,10 @@ body {
         margin-top: 70px;
     }
     
+}
+
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header {
+    position: relative;
 }
 
 // Floating footer flexbox fix
