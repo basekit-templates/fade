@@ -993,3 +993,28 @@ hr.rule {
     float: initial;
 }
 
+.blogsearch__legend {
+    @media @tablet {
+        width: initial;
+    }
+}
+
+.blogsearch__form-group:nth-child(1) {
+    @media @tablet {
+        float: left;
+        display: table;
+        width: 50%;
+        height: 40px;
+    }
+}
+
+.blogsearch__form-group:nth-child(2) {
+    @media @tablet {
+        float: left;
+        display: inline-block;
+        margin-left: 0;
+        width: 23%;
+        text-align: left;
+    }
+}
+
