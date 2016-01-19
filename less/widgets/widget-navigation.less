@@ -26,7 +26,7 @@
     }
 }
 
-// Folder Item Parent: Gives arrow 
+// Folder Item Parent: Gives arrow
 .item-name--parent:after {
     display: inline-block;
     vertical-align: middle;
@@ -74,12 +74,6 @@
 }
 
 
-// Navigation List
-.navigation-list {
-    margin: 20px 0px;
-}
-
-
 // Parent nav items, adds arrow icon
 
 .item-name--parent:after {
@@ -109,6 +103,7 @@
             display: block;
             padding-bottom: 0;
             margin: 15px 10px;
+            text-decoration: underline;
         }
     }
 }
@@ -121,27 +116,30 @@
 // -------------
 
 .navigation-item.folder .item-name:hover {
-    border: 0px solid @color-swatch1;
+    border: none;
     padding: 0;
     margin: 5px 10px;
     display: block;
     @media @tablet {
         margin: 15px 10px;
+        text-decoration: underline;
+
     }
 }
 
 
 // Selected nav item
-.navigation-item.selected > .item-name { 
+.navigation-item.selected > .item-name {
     border-bottom: 3px solid @color-swatch3;
     padding-bottom: 6px;
     @media @tablet {
         border-bottom: 0;
         padding-bottom: 0;
+        text-decoration: underline;
     }
 }
 
-.extendednavigation li.selected a, 
+.extendednavigation li.selected a,
 .extendednavigation li.selected .text {
     color: @font-swatch6-color;
 }
@@ -206,7 +204,7 @@
         transition-duration: 0.4s;
 
         padding: 150px 20px;
-        background-color: @color-swatch1;
+        background-color: @color__body--background;
 
         // Allows scrolling on mobile
         &.open {

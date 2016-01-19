@@ -78,18 +78,22 @@
 // -----------------------------
 
 @bg-color:              @color__body--background;                 // Background
+
 @bg-color-alt:          darken(@color__body--background,10%);     // Background
 
 @contrast-color:        @color__primary;                          // Contrast Color
+
 @contrast-color-alt:    darken(@color__primary,10%);              // Contrast Color Alt
 
 @button-color:          @color__button--background;               // Button BG Color
+
 @button-color-alt:      lighten(@color__button--background,20%);  // Button BG Color
 
 @heading-color:         @color-swatch4;                         // Heading Text Color (H1 - H4)
+
 @paragraph-color:       @color-swatch5;                          // Paragraph Text Color
 
-@title-color:           @color-swatch7;                        // The yellow colour used in the page title and nav
+@title-color:           @color-swatch7;
 
 @spare:                 @color-swatch7;
 
@@ -206,13 +210,13 @@ button,
 // ---------------
 
 .gallery {
-    &__image-title.image-title {
+    .image-title {
         color: @color__gallery-title--text;
     }
-    &__image-description.image-description {
+    .image-description {
         color: @color__gallery-description--text;
     }
-    .gallery .caption {
+    .caption {
         background-color: @color__gallery-caption--background;
     }
 }
@@ -224,7 +228,7 @@ button,
 // ---------------
 
 .responsiveslideshow {
-    .caption.caption {
+    .caption {
         background-color: @color__slideshow-caption--background;
     }
     .responsiveslideshow__image-title {

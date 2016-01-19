@@ -42,6 +42,12 @@
     // Tablet: reduce height
 }
 
+.bk-pt-default .template-header {
+    position: relative;
+    background-color: @color__body--background;
+}
+
+
 // Header Wrapper
 // --------------
 
@@ -84,6 +90,9 @@
     }
 }
 
+.bk-pt-default .header-wrapper {
+    padding: 10px 0;
+}
 
 
 
@@ -231,16 +240,17 @@
 .feature__content-wrap {
     text-align:center;
     max-width: 80%;
+    padding: 100px 0 50px;
     vertical-align: middle;
     display: table-cell;
     z-index: 9999;
     position: relative;
     @media @tablet {
         max-width: 100%;
-        padding: 30px 60px;
+        padding: 100px 60px 30px;
     }
     @media @mobile {
-        padding: 20px;
+        padding: 100px 20px 20px;
     }
 }
 
@@ -276,12 +286,19 @@
     }
 }
 
+.feature__headline,
+.feature__strapline {
+    @media only screen and (max-width: 1024px) {
+        max-width: 100%;
+    }
+}
+
 
 // Feature Button
 // ---------------
 
-.feature__button { 
-    margin: 10px 0 0 0; 
+.feature__button {
+    margin: 10px 0 0 0;
     color: @color__feature-button--text;
     background-color: @color__feature-button--background;
     &:hover {
@@ -311,6 +328,7 @@
 // Title
 .image-title {
     font-size: @font__h2--font-size;
+    line-height: @font__h2--line-height;
 }
 
 .imagewidget {
@@ -361,6 +379,7 @@
     .figure:hover .caption {
         visibility: visible;
         opacity: 1;
+        background-color: @color__gallery-caption--background;
     }
 
 
@@ -443,7 +462,7 @@
     bottom: 0;
     width: 100%;
     padding: 0;
-    background-color: fade(@contrast-color,60%);
+    background-color: fade(@color-swatch4,50%);
 
     @media @bp-mobile {
         padding: 0 20px;
@@ -817,7 +836,6 @@ textarea,
         margin-bottom: 0;
         padding: 20px;
 
-
         .flex(@display: flex);
         .align-items(@align: center);
         .justify-content(@justify: center);
@@ -825,8 +843,6 @@ textarea,
         -webkit-flex: 1 1 33.3%;
         -ms-flex: 1 1 33.3%;
         flex: 1 1 33.3%;
-
-
 
         .account-name,
         .tweet-content,
@@ -840,16 +856,13 @@ textarea,
             text-decoration: underline;
         }
 
-
         .account-name {
             font-size: bkscale(@font__h3--font-size,0.7);
         }
 
-
         .tweet-metadata {
             font-size: bkscale(@font__p--font-size,0.8);
         }
-
 
         .account-name:before {
             content: "\f099";
@@ -861,8 +874,6 @@ textarea,
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-
-
 
         &:nth-of-type(odd) {
             background-color: fade(@button-color,80%);
@@ -919,8 +930,8 @@ textarea,
 
 hr,
 hr.rule {
-    background-color: @contrast-color;
-    height: 2px;
+    background-color: @color-swatch5;
+    height: 1px;
 }
 
 
