@@ -140,9 +140,13 @@
     }
 }
 
+.navigation-list--children .navigation-item.selected > .item-name {
+    border-bottom: none;
+}
+
 .extendednavigation li.selected a,
 .extendednavigation li.selected .text {
-    color: @font-swatch6-color;
+    color: @color__navigation--text;
 }
 
 .navigation-item.folder.open-folder .navigation-list--children {
@@ -326,7 +330,7 @@
     .animation;
 
     // Displays as icon's middle bar
-    background-color: @font-swatch6-color;
+    background-color: @color__navigation--text;
     background-clip: content-box;
     width: 50px;
     height: 47px;
@@ -354,7 +358,7 @@
         position: absolute;
         left: 10px;
         display: block;
-        background: @font-swatch6-color;
+        background: @color__navigation--text;
         margin-right: 0;
         margin-left: 0;
         -webkit-transition: all 0.25s ease-in-out;
@@ -382,10 +386,10 @@
 
 
     &:hover {
-        background-color: @font-swatch6-color;
+        background-color: @color__navigation--text;
 
         &:after, &:before {
-            background: @font-swatch6-color;
+            background: @color__navigation--text;
         }
     }
 
@@ -394,16 +398,16 @@
     // ------------------------------
 
     .open & {
-        background-color: fade(@font-swatch6-color, 0%);
+        background-color: fade(@color__navigation--text, 0%);
         z-index: 100000;
 
         &:before {
-            top: 23px; background: @font-swatch6-color; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);
+            top: 23px; background: @color__navigation--text; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);
 
         }
 
         &:after {
-            bottom: 21px; background: @font-swatch6-color; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -o-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg);
+            bottom: 21px; background: @color__navigation--text; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -o-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg);
         }
     }
 }
