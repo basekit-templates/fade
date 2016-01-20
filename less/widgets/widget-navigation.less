@@ -115,17 +115,24 @@
 // Dropdown Menu
 // -------------
 
-.navigation-item.folder .item-name:hover {
-    border: none;
-    padding: 0;
-    margin: 5px 10px;
-    display: block;
-    @media @tablet {
-        margin: 15px 10px;
-        text-decoration: underline;
-
+.navigation-item.folder {
+    .item-name:hover {
+        border: none;
+        padding: 0;
+        margin: 5px 10px;
+        display: block;
+        padding-bottom: 6px;
+        @media @tablet {
+            margin: 15px 10px;
+            text-decoration: underline;
+        }
+    }
+    .navigation-list--children .item-name:hover {
+        padding-bottom: 0px;
     }
 }
+
+
 
 
 // Selected nav item
