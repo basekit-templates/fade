@@ -6,16 +6,20 @@
     <!-- Container -->
     <div class="container">
 
-        {% include "includes/header.twig" %}
+        <div class="main-content"><!-- adds sticky footer to default pages-->
 
-        <!-- Page Content -->
-        <section class="template-content default">
+            {% include "includes/header.twig" %}
 
-            <!-- Main Widget Zone -->
-            {{zone('main')|raw}}
+            <!-- Page Content -->
+            <section class="template-content default">
 
-        </section>
-        <!-- End Page Content -->
+                <!-- Main Widget Zone -->
+                {{zone('main')|raw}}
+
+            </section>
+            <!-- End Page Content -->
+
+        </div>
 
         {% include "includes/footer.twig" %}
 

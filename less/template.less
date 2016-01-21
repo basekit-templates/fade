@@ -109,8 +109,8 @@ body {
     position: relative;
 }
 
-// Floating footer flexbox fix
-// ---------------------------
+// Floating footer flexbox fix for default pages
+// ---------------------------------------------
 .container {
     display: flex; // Switch on flexbox layout
     flex-direction: column; // Orient flexbox to columns
@@ -121,6 +121,16 @@ body {
         flex-shrink: 0;
     }
 }
+
+.main-content { // adds sticky footer to default pages
+    flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
 
 .template-content {
     margin-top: 20px;
