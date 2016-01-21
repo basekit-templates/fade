@@ -84,6 +84,8 @@
     width:100%;
     // Layout
     padding: 10px 2%;
+    max-width: 85%;
+    
     @media @tablet {
         padding: 10px 4% 15px;
         display: inline-block;
@@ -230,6 +232,7 @@
     }
     @media @mobile {
         min-height: 200px;
+        height: 450px;
     }
 }
 
@@ -416,6 +419,14 @@
 // -----------------------------
 // 6.  #Slideshow
 // -----------------------------
+
+
+.responsiveslideshow, .responsiveslideshow .slides-list {
+    @media @mobile {
+        height: 300px;
+        min-height: 300px;
+    }
+}
 
 
 // Slideshow items
