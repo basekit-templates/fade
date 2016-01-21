@@ -4,33 +4,36 @@
 
 <div class="bk-pt-home">
 
-    {{widget('feature', 'featurehome', {
-        "header": "profile",
-        "strapline": "profile",
-        "defaultBgImg": asset('images/feature.jpg'),
-        'positionTopPercentage': '0',
-        'showBtn': true,
-        buttonText: "Lorem Ipsum"
-    })|raw}}
+    <div class="main-content"><!-- adds sticky footer -->
 
-    {% include "includes/header.twig" %}
+        {{widget('feature', 'featurehome', {
+            "header": "profile",
+            "strapline": "profile",
+            "defaultBgImg": asset('images/feature.jpg'),
+            'positionTopPercentage': '0',
+            'showBtn': true,
+            buttonText: "Lorem Ipsum"
+        })|raw}}
 
-    <!-- Container -->
-    <div class="container">
+        {% include "includes/header.twig" %}
 
-        <!-- Page Content -->
-        <section class="template-content">
+        <!-- Container -->
+        <div class="container">
 
-        <!-- Main Widget Zone -->
-        {{zone('main')|raw}}
+            <!-- Page Content -->
+            <section class="template-content">
 
-        </section>
-        <!-- End Page Content -->
+            <!-- Main Widget Zone -->
+            {{zone('main')|raw}}
+
+            </section>
+            <!-- End Page Content -->
+
+        </div><!-- End Container -->
 
         {% include "includes/footer.twig" %}
 
-    </div>
-    <!-- End Container -->
+    </div><!-- End main-content -->
 
 </div>
 
