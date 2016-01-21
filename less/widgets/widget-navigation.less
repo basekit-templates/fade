@@ -22,7 +22,7 @@
         display: block;
         top: 20px;
         position: absolute;
-        right: 20px;
+        right: 0;
     }
 }
 
@@ -89,6 +89,7 @@
 .navigation-item .item-name {
     padding: 0;
     margin: 5px 10px;
+    padding-bottom: 6px;
     @media @tablet {
         margin: 15px 10px;
     }
@@ -101,7 +102,6 @@
         @media @tablet {
             border-bottom: 0;
             display: block;
-            padding-bottom: 0;
             margin: 15px 10px;
             text-decoration: underline;
         }
@@ -110,6 +110,8 @@
 
 .navigation-item.folder .item-name:hover {
     margin: 15px 10px;
+    padding-bottom: 6px;
+    border-bottom: 3px solid @color__navigation--text--hover;
 }
 
 // Dropdown Menu
@@ -128,7 +130,7 @@
         }
     }
     .navigation-list--children .item-name:hover {
-        padding-bottom: 0px;
+        padding-bottom: 6px;
     }
 }
 
@@ -341,7 +343,7 @@
     background-clip: content-box;
     width: 50px;
     height: 47px;
-    padding: 22px 10px;
+    padding: 22px 0px 22px 20px;
     position: relative;
     right: 0;
     text-indent: 9999px;
@@ -363,7 +365,7 @@
         height: 3px;
         width: 30px;
         position: absolute;
-        left: 10px;
+        left: 20px;
         display: block;
         background: @color__navigation--text;
         margin-right: 0;
