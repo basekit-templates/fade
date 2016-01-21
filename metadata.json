@@ -236,6 +236,11 @@
         "header": {
             "color__header--background": "transparent"
         },
+        "twitter": {
+            "color__twitter-item--background": "lighten(@color-swatch4,10%)",
+            "color__twitter-account-name--text": "@color__body--background",
+            "color__twitter-tweet--text": "@color__body--background"
+        },
         "gallery": {
             "color__gallery-caption--background": "fade(@color-swatch4,50%)",
             "color__gallery-title--text": "@color-swatch1",

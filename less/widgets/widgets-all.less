@@ -832,7 +832,7 @@ textarea,
         min-height: 250px;
         text-align: center;
         display: inline-block;
-        background-color: @button-color;
+        background-color: @color__twitter-item--background;
         margin-bottom: 0;
         padding: 20px;
 
@@ -844,11 +844,15 @@ textarea,
         -ms-flex: 1 1 33.3%;
         flex: 1 1 33.3%;
 
-        .account-name,
-        .tweet-content,
-        .tweet-metadata,
-        a {
-            color: @bg-color;
+        .account-name {
+            font-family: @font__p--font-family;
+            color: @color__twitter-account-name--text;
+            font-size: @font__p--font-size;
+            font-weight: @font__p--font-weight;
+            line-height: @font__p--line-height;
+        }
+        .tweet-content {
+            color: @color__twitter-tweet--text;
         }
 
         .tweet-content a,
@@ -876,7 +880,7 @@ textarea,
         }
 
         &:nth-of-type(odd) {
-            background-color: fade(@button-color,80%);
+            background-color: fade(@color__twitter-item--background,80%);
         }
     }
 
