@@ -421,7 +421,20 @@
     }
 }
 
-
+.bk-pt-home {
+    .header-extendednavigation {
+        @media @tablet {
+            right: 20px;
+        }
+    }
+    .navigation-toggle {
+        padding: 22px 10px;
+        &:after,
+        &:before {
+            left: 10px;
+        }
+    }
+}
 
 @keyframes bar1 {
     0% { top: 13px;}

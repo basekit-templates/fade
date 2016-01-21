@@ -2,16 +2,18 @@
 
 {% block content %}
 
-{{widget('feature', 'featurehome', {
-    "header": "profile",
-    "strapline": "profile",
-    "defaultBgImg": asset('images/feature.jpg'),
-    'positionTopPercentage': '0',
-    'showBtn': true,
-    buttonText: "Lorem Ipsum"
-})|raw}}
+<div class="bk-pt-home">
 
-{% include "includes/header.twig" %}
+    {{widget('feature', 'featurehome', {
+        "header": "profile",
+        "strapline": "profile",
+        "defaultBgImg": asset('images/feature.jpg'),
+        'positionTopPercentage': '0',
+        'showBtn': true,
+        buttonText: "Lorem Ipsum"
+    })|raw}}
+
+    {% include "includes/header.twig" %}
 
     <!-- Container -->
     <div class="container">
@@ -30,5 +32,6 @@
     </div>
     <!-- End Container -->
 
+</div>
 
 {% endblock %}
