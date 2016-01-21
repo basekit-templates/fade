@@ -784,10 +784,10 @@ textarea,
 
 // Item Link
 .social-link {
-    color: @button-color;
+    color: @lighten(@color-swatch4,10%);
     .transition(@duration:0.2s, @ease:ease-in-out); // Mixin
     &:hover {
-        color: @contrast-color;
+        color: @color-swatch4;
         text-decoration: none;
     }
 }
