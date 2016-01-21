@@ -195,7 +195,6 @@
             "font__p--letter-spacing" : "@font-swatch5-letter-spacing"
         },
         "feature": {
-            "color__feature--background" : "#E0E0E0",
             "color__feature-content--background" : "@color-swatch2",
             "color__feature-headline--text": "@font-swatch8-color",
             "color__feature-strapline--text": "@font-swatch9-color",
