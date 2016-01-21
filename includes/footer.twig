@@ -1,0 +1,15 @@
+<!-- Footer Text Widget -->
+<footer class="template-footer">
+    {{widget('content', 'footer-content', {
+    content: '<p>&copy; Copyright</p>'
+    })|raw}}
+
+    {{widget('socialicons', 'socialnetworks', {
+        'googleplus': 'profile',
+        'linkedin':'profile',
+        'facebook': 'profile',
+        'twitter': 'profile',
+        'youtube': 'profile',
+        'rss': 'profile'
+      })|raw}}
+</footer>

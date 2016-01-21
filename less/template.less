@@ -1,0 +1,178 @@
+// --------------------------------
+// Mono: template.less
+// --------------------------------
+
+// Contains various global layout styles.
+
+
+
+// -----------------------------
+// 2. Media Queries
+// -----------------------------
+
+
+@bp-tablet: ~"only screen and (max-width: 800px)";
+@bp-mobile: ~"only screen and (max-width: 600px)";
+
+
+
+
+// -----------------------------
+// 3. Typography
+// -----------------------------
+
+
+    // Anchor links
+    a {
+        color: @color__link--text;
+    }
+
+
+
+
+// -----------------------------
+// 3. Global Styles
+// -----------------------------
+
+
+// Body
+// ---------------
+
+body {
+    background: @bg-color;
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+
+// Stops mobile scrolling of the body - only the nav is scrollable
+.noscroll {
+    overflow: hidden;
+    height: 100%;
+    max-height: 100vh;
+}
+
+
+
+
+// Container
+// ---------------
+
+.container,
+.bk-pt-home .template-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.blog-post-container {
+    width: 60%;
+    margin: 0 auto;
+
+    @media @tablet {
+        width: 100%;
+    }
+}
+
+
+
+
+// -----------------------------
+// 4. Page Layout
+// -----------------------------
+
+
+.template-content {
+
+    &.default {
+        background-color: @color-swatch1;
+        margin-top: 0;
+        padding: 30px 30px 0px;
+    }
+
+    &.blog-post-container {
+        background-color: @color-swatch1;
+        padding: 60px 20px;
+    }
+
+    @media @tablet {
+        margin-top: 70px;
+    }
+
+}
+
+// Tpl Hidden
+// -----------------------------
+
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header {
+    position: relative;
+}
+
+// Floating footer flexbox fix for default pages
+// ---------------------------------------------
+
+.homepage-content,
+.bk-pt-default .container {
+    display: flex; // Switch on flexbox layout
+    flex-direction: column; // Orient flexbox to columns
+    height: 100vh; // Set height to the height of the viewport
+
+    // Apply flex shrink 0 to all direct childer element
+    > * {
+        flex-shrink: 0;
+    }
+}
+
+.main-content { // adds sticky footer to default pages
+    flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+
+.template-content {
+    margin-top: 20px;
+}
+
+
+
+
+// -----------------------------
+// 5. Footer
+// -----------------------------
+
+
+.template-footer {
+    .flex(@display: flex); // Mixins
+    .justify-content(@justify: space-between); // Mixins
+    .flex-wrap(@wrap: wrap); // Mixins
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+
+    // Content widget margin to stop crashing
+    [data-widget-type="content"] {
+        margin-right: 20px;
+    }
+
+
+
+    p {
+        color: @button-color;
+    }
+
+
+    // Mobile
+    // ----------------
+
+    @media @mobile {
+        .flex-wrap(@wrap: wrap);
+        .justify-content(@justify: center);
+    }
+}
