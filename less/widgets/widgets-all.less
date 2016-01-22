@@ -84,10 +84,14 @@
     width:100%;
     // Layout
     padding: 10px 2%;
-    
+
     @media @tablet {
         padding: 10px 4% 15px;
         display: inline-block;
+    }
+
+    @media @mobile {
+        padding: 20px 16% 15px 4%;
     }
 }
 
@@ -182,9 +186,14 @@
     -webkit-align-self: auto;
     -ms-flex-item-align: auto;
     align-self: auto;
+
     @media @tablet {
         display: inline-block;
         margin-top: 20px;
+    }
+    
+    @media @mobile {
+        margin-top: 0;
     }
 }
 
