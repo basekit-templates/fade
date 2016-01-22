@@ -191,7 +191,7 @@
         display: inline-block;
         margin-top: 20px;
     }
-    
+
     @media @mobile {
         margin-top: 0;
     }
@@ -429,10 +429,17 @@
 // -----------------------------
 
 
-.responsiveslideshow, .responsiveslideshow .slides-list {
+.responsiveslideshow {
     @media @mobile {
-        height: 300px;
-        min-height: 300px;
+        height: 300px!important;
+        min-height: 300px!important;
+    }
+}
+
+.responsiveslideshow .slides-list {
+    @media @mobile {
+        min-height: 300px!important;
+        height: 300px!important;
     }
 }
 
