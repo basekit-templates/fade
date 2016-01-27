@@ -11,6 +11,7 @@
 // -----------------------------
 
 
+@bp-desktop: ~"only screen and (max-width: 1024px)";
 @bp-tablet: ~"only screen and (max-width: 800px)";
 @bp-mobile: ~"only screen and (max-width: 600px)";
 
@@ -123,8 +124,9 @@ body {
     > * {
         flex-shrink: 0;
     }
-    @media @tablet {
+    @media @bp-desktop {
         display: block;
+        height: 100%;
     }
 }
 
