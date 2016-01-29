@@ -89,7 +89,7 @@
 .navigation-item .item-name {
     padding: 0;
     margin: 5px 10px;
-    padding-bottom: 6px;
+    padding-bottom: 1px;
     @media @tablet {
         margin: 15px 10px;
     }
@@ -97,7 +97,7 @@
         border-bottom: 3px solid @color__navigation--text--hover;
         display: inline-block;
         color: @color__navigation--text;
-        padding-bottom: 6px;
+        padding-bottom: 1px;
         margin: 5px 10px;
         @media @tablet {
             border-bottom: 0;
@@ -110,8 +110,8 @@
 
 .navigation-item.folder .item-name:hover {
     margin: 15px 10px;
-    padding-bottom: 6px;
-    border-bottom: 3px solid @color__navigation--text--hover;
+    padding-bottom: 1px;
+    border-bottom: 2px solid @color__navigation--text--hover;
 }
 
 // Dropdown Menu
@@ -123,14 +123,14 @@
         padding: 0;
         margin: 5px 10px;
         display: block;
-        padding-bottom: 6px;
+        padding-bottom: 1px;
         @media @tablet {
             margin: 15px 10px;
             text-decoration: underline;
         }
     }
     .navigation-list--children .item-name:hover {
-        padding-bottom: 6px;
+        padding-bottom: 1px;
     }
 }
 
@@ -139,8 +139,8 @@
 
 // Selected nav item
 .navigation-item.selected > .item-name {
-    border-bottom: 3px solid @color__navigation--text--selected;
-    padding-bottom: 6px;
+    border-bottom: 2px solid @color__navigation--text--selected;
+    padding-bottom: 1px;
     color: @color__navigation--text;
     @media @tablet {
         border-bottom: 0;
@@ -345,7 +345,7 @@
     height: 47px;
     padding: 22px 0px 22px 20px;
     position: relative;
-    right: 0;
+    right: 30px;
     text-indent: 9999px;
     overflow: hidden;
     float: right;

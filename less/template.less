@@ -87,22 +87,14 @@ body {
 
 .template-content {
 
-    &.default {
-        background-color: @color-swatch1;
-        margin-top: 0;
-        padding: 30px 30px 10px;
-    }
-
     &.blog-post-container {
         background-color: @color-swatch1;
         padding: 20px;
     }
 
-    @media @tablet {
-        margin-top: 70px;
-    }
-
 }
+
+
 
 // Tpl Hidden
 // -----------------------------
@@ -111,40 +103,13 @@ body {
     position: relative;
 }
 
-// Floating footer flexbox fix for default pages
-// ---------------------------------------------
-
-.homepage-content,
-.bk-pt-default .container {
-    display: flex; // Switch on flexbox layout
-    flex-direction: column; // Orient flexbox to columns
-    height: 100vh; // Set height to the height of the viewport
-
-    // Apply flex shrink 0 to all direct childer element
-    > * {
-        flex-shrink: 0;
-    }
-    @media @bp-desktop {
-        display: block;
-        height: 100%;
-    }
-}
-
-.main-content { // adds sticky footer to default pages
-    flex: 1;
-    -webkit-box-flex: 1;
-    -moz-box-flex: 1;
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    @media @tablet {
-        display: block;
-    }
-}
-
 
 .template-content {
-    margin-top: 20px;
+    padding-top: 60px;
+
+    @media @tablet {
+        padding-top: 40px;
+    }
 }
 
 
@@ -156,19 +121,13 @@ body {
 
 
 .template-footer {
-    .flex(@display: flex); // Mixins
-    .justify-content(@justify: space-between); // Mixins
-    .flex-wrap(@wrap: wrap); // Mixins
-
-    margin-top: 20px;
-    margin-bottom: 10px!important;
+    margin: 20px 0;
 
 
     // Content widget margin to stop crashing
     [data-widget-type="content"] {
         margin-right: 20px;
     }
-
 
 
     p {
