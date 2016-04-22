@@ -585,6 +585,15 @@ button.pause-toggle {
     }
 }
 
+.no-touch {
+    button.responsiveslideshow__previous-button:hover,
+    button.responsiveslideshow__next-button:hover,
+    button.pause-toggle:hover {
+        background-color: @color__button--background--hover;
+        color: @color__button--text;
+    }
+}
+
 
 // Ensures pause button is aligned centrally if next and prev buttons are hidden
 button.pause-toggle {
@@ -690,7 +699,7 @@ button,
     .transition(@duration:0.2s, @ease:ease-in-out); // Mixin
     line-height: @font__button--line-height;
     padding: 10px 15px;
-    
+
     &:focus {
         outline: 0;
     }
