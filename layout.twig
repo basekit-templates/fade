@@ -1,65 +1,55 @@
 <!doctype html>
-<!--[if lt IE 7]>
-    <html class="no-js ie6 oldie" lang="en">
-<![endif]-->
-<!--[if IE 7]>
-    <html class="no-js ie7 oldie" lang="en">
-<![endif]-->
-<!--[if IE 8]>
-    <html class="no-js ie8 oldie" lang="en">
-<![endif]-->
-<!--[if gt IE 8]><!-->
 <html class="no-js" lang="{{ page.seoLang }}">
-<!--<![endif]-->
-<head>
-    <meta charset="utf-8" />
-    <title>{{ page.title }}</title>
-    <meta name="keywords" content="{{ page.keywords }}" />
-    <meta name="description" content="{{ page.description }}" />
 
-    {% if site.favicon %}
-        <link rel="icon" href="{{ site.favicon['favicon'] }}" type="image/x-icon" />
-        <link rel="SHORTCUT ICON" href="{{ site.favicon['thumbnail'] }}?v={{ "now"|date("U") }}" type="image/x-icon" />
-    {% endif %}
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <head>
+        <meta charset="utf-8" />
+        <title>{{ page.title }}</title>
+        <meta name="keywords" content="{{ page.keywords }}" />
+        <meta name="description" content="{{ page.description }}" />
 
-    {% include basekit.headScript %}
-</head>
-<body class="{{ page.backgroundClass }}">
+        {% if site.favicon %}
+            <link rel="icon" href="{{ site.favicon['favicon'] }}" type="image/x-icon" />
+            <link rel="SHORTCUT ICON" href="{{ site.favicon['thumbnail'] }}?v={{ "now"|date("U") }}" type="image/x-icon" />
+        {% endif %}
+        <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    {% block content %}
-    {% endblock %}
+        {% include basekit.headScript %}
+    </head>
 
-    {% include basekit.bodyScript %}
+    <body class="{{ page.backgroundClass }}">
 
-    <!-- jQuery -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script>
-        $(document).on('mq4hsChange', function (e) {
-            console.log(e);
-            $(document.documentElement).toggleClass('no-touch', e.trueHover);
-        });
-    </script>
-    <script src="{{asset('js/mq4-hover-shim.js')}}"></script>
+        {% block content %}
+        {% endblock %}
 
-    <!-- Nav Menu Script -->
-    <script>
+        {% include basekit.bodyScript %}
 
-        // Toggles class open to display/hide the whole navigation
-        $( ".navigation-toggle" ).click(function() {
-            $( ".bk-extendednavigation" ).toggleClass( "open" );
-            $( "body, html" ).toggleClass( "noscroll" );
-        });
-
-        // Toggles class open to display/hide folders
-
-        $( ".navigation-item.folder .item-name--parent" ).each(function() {
-            $( this ).click(function() {
-                    $( this ).parent( ".navigation-item.folder" ).toggleClass( "open-folder" );
+        <!-- jQuery -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script>
+            $(document).on('mq4hsChange', function (e) {
+                console.log(e);
+                $(document.documentElement).toggleClass('no-touch', e.trueHover);
             });
-        });
+        </script>
+        <script src="{{asset('js/mq4-hover-shim.js')}}"></script>
 
-    </script>
+        <!-- Nav Menu Script -->
+        <script>
 
-</body>
+            // Toggles class open to display/hide the whole navigation
+            $( ".navigation-toggle" ).click(function() {
+                $( ".bk-extendednavigation" ).toggleClass( "open" );
+                $( "body, html" ).toggleClass( "noscroll" );
+            });
+
+            // Toggles class open to display/hide folders
+            $( ".navigation-item.folder .item-name--parent" ).each(function() {
+                $( this ).click(function() {
+                        $( this ).parent( ".navigation-item.folder" ).toggleClass( "open-folder" );
+                });
+            });
+
+        </script>
+
+    </body>
 </html>
