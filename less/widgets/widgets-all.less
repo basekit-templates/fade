@@ -36,7 +36,6 @@
     min-height: 80px;
     background-color: transparent;
     position: absolute;
-    z-index: 99999;
     width: 100%;
     top: 0;
 }
@@ -44,6 +43,11 @@
 .bk-pt-default .template-header {
     position: relative;
     background-color: @color__body--background;
+}
+
+// For home page and when feature is hidden
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header {
+    position: relative;
 }
 
 
