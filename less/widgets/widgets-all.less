@@ -31,7 +31,7 @@
 // 1. #Template Header
 // -----------------------------
 
-.template-header {
+[data-widget-type="feature"] + .template-header {
     .flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
     min-height: 80px;
     background-color: transparent;
@@ -46,7 +46,8 @@
 }
 
 // For home page and when feature is hidden
-.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header {
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header,
+.template-header {
     position: relative;
 }
 
