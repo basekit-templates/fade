@@ -25,7 +25,7 @@
 
         <!-- jQuery -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-        <script>
+        <script nonce="{{ numberUsedOnce }}">
             $(document).on('mq4hsChange', function (e) {
                 console.log(e);
                 $(document.documentElement).toggleClass('no-touch', e.trueHover);
@@ -34,7 +34,7 @@
         <script src="{{asset('js/mq4-hover-shim.js')}}"></script>
 
         <!-- Nav Menu Script -->
-        <script>
+        <script nonce="{{ numberUsedOnce }}">
 
             // Toggles class open to display/hide the whole navigation
             $( ".navigation-toggle" ).click(function() {
