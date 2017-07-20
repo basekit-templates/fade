@@ -152,6 +152,7 @@
             "color__secondary": "@color-swatch7"
         },
         "site": {
+            "color__header--background": "#FFFFFF",
             "color__body--background": "#F5F5F5",
             "color__link--text": "@color-swatch3",
             "color__companyname--text": "@font-swatch10-color",
