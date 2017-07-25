@@ -41,9 +41,10 @@
     z-index: 10000;
 }
 
-.bk-pt-default .template-header {
+.bk-pt-default .template-header,
+[data-widget-type="feature"].bk-tpl-hidden + .template-header {
+    background-color: @color__header--background;
     position: relative;
-    background-color: @color__body--background;
 }
 
 // For home page and when feature is hidden
@@ -102,15 +103,12 @@
 }
 
 .footer-wrapper {
+    padding: 10px 0%;
     .justify-content(space-between);
 
     @media @mobile {
         display: block;
     }
-}
-
-.bk-pt-default .template-header {
-    background-color: @color-swatch1;
 }
 
 
