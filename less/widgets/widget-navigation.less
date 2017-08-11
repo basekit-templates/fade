@@ -30,6 +30,11 @@
         float: right;
         top: 0;
     }
+    .widget__item {
+        @media @tablet {
+            right: 89px;
+        }
+    }
 }
 
 // Folder Item Parent: Gives arrow
@@ -449,13 +454,21 @@
     }
 }
 
-// Editor Navigation Overlay Settings
-[data-widget-type="extendednavigation"] .widget-overlay .widget__list {
-   @media @mobile {
-        left: -90px !important;
-        position: absolute;
+.bk-pt-default {
+    .header-extendednavigation {
+        .list--options {
+            float: initial;
+        }
+    }
+    .navigation-toggle {
+        right: 10px;
+    }
+    .header-extendednavigation {
+        right: 20px;
     }
 }
+
+
 
 @keyframes bar1 {
     0% { top: 13px;}
