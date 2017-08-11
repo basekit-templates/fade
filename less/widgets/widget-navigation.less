@@ -31,7 +31,7 @@
         top: 0;
     }
     .widget__item {
-        @media @tablet {
+        @media @bp-tablet {
             right: 89px;
         }
     }
@@ -455,16 +455,18 @@
 }
 
 .bk-pt-default {
-    .header-extendednavigation {
-        .list--options {
-            float: initial;
-        }
-    }
     .navigation-toggle {
         right: 10px;
     }
     .header-extendednavigation {
         right: 20px;
+    }
+}
+
+// Widget Overlay
+.header-extendednavigation {
+    .list--options {
+        float: initial;
     }
 }
 
