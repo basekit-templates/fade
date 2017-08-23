@@ -30,6 +30,11 @@
         float: right;
         top: 0;
     }
+    .widget__item {
+        @media @bp-tablet {
+            right: 89px;
+        }
+    }
 }
 
 // Folder Item Parent: Gives arrow
@@ -449,13 +454,26 @@
     }
 }
 
-// Editor Navigation Overlay Settings
-[data-widget-type="extendednavigation"] .widget-overlay .widget__list {
-   @media @mobile {
-        left: -90px !important;
-        position: absolute;
+.bk-pt-default {
+    .navigation-toggle {
+        right: 10px;
+        @media @bp-mobile {
+            right: 0;
+        }
+    }
+    .header-extendednavigation {
+        right: 20px;
     }
 }
+
+// Widget Overlay
+.header-extendednavigation {
+    .list--options {
+        float: initial;
+    }
+}
+
+
 
 @keyframes bar1 {
     0% { top: 13px;}
