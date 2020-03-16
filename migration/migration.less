@@ -11,14 +11,41 @@
     // -----------------------------
 
 
-    .container {
-        max-width: 100%;
+    .container,
+    .blog-post-container {
+        max-width: 10%;
         width: 100%;
     }
 
 
     .template-content {
         padding-top: 0;
+    }
+
+
+    .blog-post-container {
+        padding: 0;
+    }
+
+
+    [data-name="row"] [data-name="blogpost"] {
+        @media only screen and (min-width: 860px) {
+            max-width: 80%;
+        }
+    }
+
+
+    .post-content {
+        margin-bottom: 0;
+    }
+
+
+    [data-name="row"] .social-link {
+        padding: 6px;
+
+        &:before {
+            margin-right: 0;
+        }
     }
 
 
