@@ -374,36 +374,8 @@
     // ------------
 
     .gallery-item {
-        height: 280px;
         overflow: hidden;
     }
-
-
-
-    // Gallery Caption
-    // ---------------
-
-    .caption {
-        display: block !important;
-        height: 100%;
-        opacity: 0; // Hides caption by default
-
-        .transition(@duration:0.3s, @ease:ease-in-out); // Mixins
-    }
-
-
-
-
-    // Hover State
-    // ---------------
-
-    .figure:hover .caption {
-        visibility: visible;
-        opacity: 1;
-        background-color: @color__gallery-caption--background;
-    }
-
-
 
 
     // Caption Link
@@ -411,17 +383,6 @@
 
     a.gallery__caption-link:hover {
         text-decoration: none;
-    }
-
-
-
-    // Smaller screens
-    // ---------------
-
-    @media @bp-tablet {
-        .gallery-item {
-            height: 210px;
-        }
     }
 }
 
@@ -1047,9 +1008,3 @@ hr.rule {
         background-color: @contrast-color;
     }
 }
-
-
-
-
-
-
