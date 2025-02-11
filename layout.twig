@@ -1,6 +1,5 @@
 <!doctype html>
 <html class="no-js" lang="{{ page.seoLang }}">
-
     <head>
         <meta charset="utf-8" />
         <title>{{ page.title }}</title>
@@ -23,33 +22,18 @@
 
         {% include basekit.bodyScript %}
 
-        <!-- jQuery -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         <script nonce="{{ numberUsedOnce }}">
-            $(document).on('mq4hsChange', function (e) {
-                console.log(e);
-                $(document.documentElement).toggleClass('no-touch', e.trueHover);
-            });
-        </script>
-        <script src="{{asset('js/mq4-hover-shim.js')}}"></script>
-
-        <!-- Nav Menu Script -->
-        <script nonce="{{ numberUsedOnce }}">
-
-            // Toggles class open to display/hide the whole navigation
-            $( ".navigation-toggle" ).click(function() {
-                $( ".bk-extendednavigation" ).toggleClass( "open" );
-                $( "body, html" ).toggleClass( "noscroll" );
+            document.querySelector(".navigation-toggle").addEventListener("click", function () {
+                document.querySelector(".bk-extendednavigation").classList.toggle("open");
+                document.body.classList.toggle("noscroll");
+                document.documentElement.classList.toggle("noscroll");
             });
 
-            // Toggles class open to display/hide folders
-            $( ".navigation-item.folder .item-name--parent" ).each(function() {
-                $( this ).click(function() {
-                        $( this ).parent( ".navigation-item.folder" ).toggleClass( "open-folder" );
+            document.querySelectorAll(".navigation-item.folder .item-name--parent").forEach(function (element) {
+                element.addEventListener("click", function () {
+                    this.parentElement.classList.toggle("open-folder");
                 });
             });
-
         </script>
-
     </body>
 </html>
